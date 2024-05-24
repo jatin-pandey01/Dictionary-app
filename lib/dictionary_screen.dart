@@ -66,7 +66,6 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
                       fontWeight: FontWeight.bold,
                       fontSize: 25,
                       color: Colors.blue,
-                      
                     ),
                   ),
                   Text(
@@ -87,11 +86,13 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
                 ],
               )
             )
-            else Center(
-              child: Text(
-                noDataFound,
-                style: TextStyle(
-                  fontSize: 22,
+            else Expanded(
+              child: Center(
+                child: Text(
+                  noDataFound,
+                  style: TextStyle(
+                    fontSize: 22,
+                  ),
                 ),
               ),
             )
@@ -125,12 +126,15 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
               ),
             ),
             SizedBox(height: 10,),
-            Text(
-              "Definition : ",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-                color: Colors.black,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal:8.0),
+              child: Text(
+                "Definition : ",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Colors.black,
+                ),
               ),
             ),
             Padding(
